@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>obscura</Name>
+  <Repository>ghcr.io/painteau/obscura-cdp:latest</Repository>
+  <Registry>https://ghcr.io/painteau/obscura-cdp</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/painteau/obscura-cdp</Support>
+  <Project>https://github.com/h4ckf0r0day/obscura</Project>
+  <Overview>Lightweight Rust headless browser with remote CDP access. Obscura uses ~30 MB RAM vs ~200 MB for Chrome. Exposes Chrome DevTools Protocol (CDP) on port 9223, rewritten for remote access via nginx — compatible with Playwright, Puppeteer, and any CDP client.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:9223]/json/version</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/painteau/obscura-cdp/main/unraid-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/h4ckf0r0day/obscura/main/assets/icon.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="CDP Port" Target="9223" Default="9223" Mode="tcp" Description="Chrome DevTools Protocol endpoint. Connect Playwright or any CDP client to http://[IP]:9223" Type="Port" Display="always" Required="true" Mask="false">9223</Config>
+</Container>
